@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
 gem 'rails', '4.2.6'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', platforms: [:ruby]
+  gem 'pg', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'byebug'
   gem 'database_cleaner'
   gem 'capybara'
@@ -16,7 +16,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails' 
+  gem 'cucumber-rails', require: false
   gem 'cucumber-rails-training-wheels'
 end
 group :production do
@@ -33,6 +33,7 @@ gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
 gem 'haml'
+gem 'haml-rails'
 gem 'protected_attributes'
 
 # Use unicorn as the web server
@@ -40,3 +41,6 @@ gem 'protected_attributes'
 
 # Deploy with Capistrano
 # gem 'capistrano'
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
