@@ -14,11 +14,15 @@ The app code in `rottenpotatoes` contains a "canonical" solution to the
 Rails Intro assignment against which to write your scenarios, and the
 necessary scaffolding for the first couple of scenarios. 
 
-Clone this repo to your C9 instance or local machine:
+Clone (or fork) this repo to your local machine:
 
 ```sh
 $ git clone https://github.com/lgbanuelos/hw-bdd-cucumber
 ```
+
+**IMPORTANT:** If your are using a Windows box, you must replace the 
+content of `config/database.yml` as we have done during the last 
+lecture/practical (see https://bitbucket.org/lgbanuelos/asd-2016/wiki/Lecture5).
 
 We recommend
 that you do a `git commit` as you get each part working.  As an optional
