@@ -17,7 +17,7 @@ necessary scaffolding for the first couple of scenarios.
 Clone this repo to your C9 instance or local machine:
 
 ```sh
-$ git clone https://github.com/saasbook/hw-bdd-cucumber
+$ git clone https://github.com/lgbanuelos/hw-bdd-cucumber
 ```
 
 We recommend
