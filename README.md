@@ -24,6 +24,35 @@ $ git clone https://github.com/lgbanuelos/hw-bdd-cucumber
 content of `config/database.yml` as we have done during the last 
 lecture/practical (see https://bitbucket.org/lgbanuelos/asd-2016/wiki/Lecture5).
 
+We would also need to setup the database. Run the following command (WINDOWS users only):
+
+```sh
+bundle exec rake db:setup
+```
+
+Then, we need to run the database migration. Please note that the Gemfile is specifying
+to different versions of some of the gems. To address this situation, we will need to use 
+`bundle exec` to prefix several of the commands. For this reason, to run the database
+migration we will use the command:
+
+```sh
+bundle exec rake db:migrate
+```
+
+The above will complete the setup for our development database. To setup the test database
+we need to use the following variant:
+
+```sh
+bundle exec rake db:migrate RAILS_ENV=test
+```
+
+Something similar applies to `cucumber`. To start your BDD cycle, you will need to use
+the command:
+
+```sh
+bundle exec cucumber
+```
+
 We recommend
 that you do a `git commit` as you get each part working.  As an optional
 additional help, git allows you to associate tags---symbolic
